@@ -84,7 +84,12 @@ function AuthProvider({ children }) {
                     })
             })
             .catch((e) => {
-                console.log(e)
+                if (e.code === 'auth/email-already-in-use') {
+                    toast.error("Este email já está em uso.");
+                } else {
+                    console.log(e);
+                    toast.error("Erro ao cadastrar. Tente novamente.");
+                }
                 setLoadingAuth(false)
             })
     }

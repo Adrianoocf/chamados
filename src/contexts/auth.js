@@ -27,7 +27,7 @@ function AuthProvider({ children }) {
             const storageUser = localStorage.getItem("@ticketsPRO")
             if (storageUser) {
                 setUser(JSON.parse(storageUser))
-                setLoading(false)
+                setLoading(false) 
             }
             setLoading(false)
         }

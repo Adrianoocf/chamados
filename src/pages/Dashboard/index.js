@@ -165,7 +165,11 @@ function Dashboard() {
                         </>
                     )}
                 </>
+                <div className='container'>
+                    <button className='logout-btn' onClick={() => logout()}>Sair</button>
+                </div>
             </div>
+
             {showPostModal && (
                 <Modal
                     conteudo={detail}

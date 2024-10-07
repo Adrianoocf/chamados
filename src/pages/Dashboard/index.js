@@ -166,7 +166,10 @@ function Dashboard() {
                     )}
                 </>
                 <div className='container'>
-                    <button className='logout-btn' onClick={() => logout()}>Sair</button>
+                    <button className='logout-btn' onClick={() => {
+                        localStorage.clear(); // Limpa o localStorage
+                        logout();
+                    }}>Sair</button>
                 </div>
             </div>
 
